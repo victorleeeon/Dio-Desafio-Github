@@ -1,4 +1,4 @@
-# O que é o GitBash?
+O que é o GitBash?
 
 O Git Bash é o aplicativo para ambientes do Microsoft Windows que oferece a camada de emulação
 para a experiência de linha de comando Git. Bash é acrônico para "Bourne Again Shell".
@@ -7,7 +7,7 @@ Shells são aplicativos terminais usados como interface em sistemas operacionais
 Link Download: https://git-scm.com/downloads
 
 
-# E o que é Git?
+E o que é Git?
 
 Git é um sistema de versionamento de código comumente utilizado para projetos de desenvolvimento de software.
 Isso significa que ele trabalha como um intermediador entre um repositório local
