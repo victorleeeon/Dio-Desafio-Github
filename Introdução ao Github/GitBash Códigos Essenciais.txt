@@ -1,9 +1,6 @@
 Espero que ajude vocês. Já adianto que nem todos são usados no dia-a-dia,
 mas é bom saber da existência deles e para que servem!
 
-O que está em negrito são dados que podem (ou devem) ser alterados.
-
-
 
 git remote add origin git@github.com:<userGitHub>/<nomeDoRepositório>.git ⇾ Cria um "apelido" pro repositório no GitHub.
 Nesse caso o apelido é Origin, comumente é usado esse nome para o repositório padrão;
