@@ -27,5 +27,23 @@ COMANDOS MAIS UTILIZADOS E O QUE ELES FAZEM.
     git push origin master: envia os arquivos para o repositório remoto que você especificou através da URL do comando acima
     git checkout -b <nomeDaBranch>: cria uma nova branch
     git checkout <nomeDaBranch>: alterna para a branch especificada
+    
+    
+    
+ COMO EXCLUIR PASTAS E ARQUIVOS SEM APAGAR O REPOSITÓRIO?
+ 
+ Através do próprio gitBash...
+
+Quando precisar remover pasta:
+
+gir rm -rf --cached (nome da pasta/) obs: no nome da pasta precisa ter a "/" no final
+
+
+
+Se for remover só o arquivo:
+
+git rm --cached (nome do arquivo)
+
+
 
 Com essa ajuda, coloque a mão na massa!
