@@ -16,6 +16,7 @@ e atualizações do seu código.
 
 Lembrando que Git e Gitbash são a mesma coisa!
 
+
 COMANDOS MAIS UTILIZADOS E O QUE ELES FAZEM.
 
     git init: inicializa um repositório local git
@@ -30,9 +31,9 @@ COMANDOS MAIS UTILIZADOS E O QUE ELES FAZEM.
     
     
     
- COMO EXCLUIR PASTAS E ARQUIVOS SEM APAGAR O REPOSITÓRIO?
+COMO EXCLUIR PASTAS E ARQUIVOS SEM APAGAR O REPOSITÓRIO?
  
- Através do próprio gitBash...
+Através do próprio gitBash...
 
 Quando precisar remover pasta:
 
