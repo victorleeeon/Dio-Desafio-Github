@@ -2,7 +2,30 @@ O que é o GitBash?
 
 O Git Bash é o aplicativo para ambientes do Microsoft Windows que oferece a camada de emulação
 para a experiência de linha de comando Git. Bash é acrônico para "Bourne Again Shell".
-Shells são aplicativos terminais usados como interface em sistemas operacionais por meio de comandos gravados
+Shells são aplicativos terminais usados como interface em sistemas operacionais por meio de comandos gravados.
 
 Link Download: https://git-scm.com/downloads
 
+
+E o que é Git?
+
+Git é um sistema de versionamento de código comumente utilizado para projetos de desenvolvimento de software.
+Isso significa que ele trabalha como um intermediador entre um repositório local
+e um remoto (como por exemplo o GitHub), onde você pode controlar e administrar as alterações
+e atualizações do seu código.
+
+Lembrando que Git e Gitbash são a mesma coisa!
+
+COMANDOS MAIS UTILIZADOS E O QUE ELES FAZEM.
+
+    git init: inicializa um repositório local git
+    git status: verifica o estado dos seus arquivos
+    git add <nomeDoArquivo>: envia seu arquivo especificado para o Stage
+    git add - -all: envia todos os arquivos para o Stage
+    git commit -m “tituloDoCommit: envia o que está no Stage para o HEAD
+    git remote add origin urlDoRepositorio: adiciona e indica a URL do repositório remoto em que os arquivos serão mantidos
+    git push origin master: envia os arquivos para o repositório remoto que você especificou através da URL do comando acima
+    git checkout -b <nomeDaBranch>: cria uma nova branch
+    git checkout <nomeDaBranch>: alterna para a branch especificada
+
+Com essa ajuda, coloque a mão na massa!
