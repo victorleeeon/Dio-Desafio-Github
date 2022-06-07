@@ -1,0 +1,151 @@
+Tutorial - Como usar chaves SSH no GitHub.
+
+Este tutorial é para pessoas, que assim como eu que tiveram muitos problemas por não saber como usar as chaves SSH no GitHub.
+
+O que é SSH?
+
+
+É um protocolo de rede que permite que os administradores de um servidor acessem um computador remoto de maneira segura.
+
+Ele usa criptografia de chave pública autenticando o computador remoto e permite autenticar o utilizador quando necessário.
+
+Sua vantagem é criptografia de dados mesmo em conexões inseguras. Assim suas credenciais e informações confidenciais estão protegidas de acesso não autorizado.
+
+Ele é oferecido pelos serviços de hospedagem e garante a segurança entre o servidor remoto e o computador
+
+
+
+Usando o protocolo SSH, você pode se conectar a servidores e serviços remotos e se autenticar neles. Com chaves SSH, você pode conectar-se a GitHub sem inserir seu nome de usuário e token de acesso pessoal em cada visita.
+
+Configurando o SSH no Git
+Verificando se há chaves SSH no Linux, Mac e Windows
+
+Digite no terminal digite:
+
+ls -al ~/.ssh
+# Lista os arquivos em seu diretório .ssh, se existirem
+
+
+Se você tiver uma chave SSH pública a lista de nomes de arquivos parecerão listados como os abaixo.
+
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+
+Gerando uma chave SSH
+
+
+Gerando uma chave SSH e conectando sua chave segurança de segurança de hardware ao computador quando autenticar com par de chaves, o nome "par" é porque é criada uma chave pública e uma privada.
+
+Isso faz com que você não precise entrar novamente toda vez que usar sua chave, vamos adicionar ao agente que gerencia e gravar sua senha.
+
+
+
+No terminal digite ou copie e cole o código substituindo seu endereço de e-mail do GitHub.
+
+$ ssh-keygen -t ed25519 -C "seu_email@examplo.com"
+# Isso cria uma nova chave SSh, utilizando o e-mail fornecido
+
+
+Quando solicitar "Digite um arquivos para salvar a tecla" aperte Enter. Vai salvar no local padrão do aquivo.
+
+> Enter a file in which to save the key (/home/you/.ssh/algorithm): [Press enter]
+
+
+No terminal coloque sua senha segura.
+
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+
+Adicione sua chave SSH ao ssh-agent
+
+
+O ssh-agente gerencia as chaves ssh. A conexão irá funcionar após adicionar uma chave privada ao gerenciador.
+
+Antes de adicionar verifique as chaves existentes e gerando uma nova chave.
+
+eval "$(ssh-agent -s)"
+
+> Agent pid 59566
+
+Dependendo do sistema talvez seja necessário utilizar o comando abaixo:
+
+sudo -s -Hexec ssh-agent bashexec ssh-agent zsh
+
+Adicionando a chave privada.
+
+ssh-add ~/.ssh/id_ed25519
+
+
+
+Se você criou o nome da chave diferente da padrão substitua id_ed25519 com o nome da sua chave privada.
+
+Adicione a chave SSH à sua conta no GitHub.
+Próximo passo é copiar a chave pública, utilizando o código abaixo digite ou copie e cole no terminal.
+
+
+
+No Linux:
+
+cat ~/.ssh/id_ed25519.pub
+
+
+
+No Windows:
+
+$ clip < ~/.ssh/id_ed25519.pub
+
+
+
+No Mac:
+
+$ pbcopy < ~/.ssh/id_ed25519.pub
+
+Será exibido no terminal para sua área de transferência.
+
+
+
+Vá em sua foto de perfil, clique depois vá em configurações.
+
+Na barra lateral de configurações do usuário, clique em chaves SSH e GPG.
+Clique em New SSH key (Nova chave SSH) ou Add SSH key (Adicionar chave SSH).
+Clique em New SSH key (Nova chave SSH) ou Add SSH key (Adicionar chave SSH).
+No campo "Title" (Título), adicione uma etiqueta descritiva para a nova chave. Por exemplo, se estiver usando um Mac pessoal, você poderá chamar essa chave de "Personal MacBook Air".
+Cole sua chave no campo "Key" (Chave).
+Clique em Add SSH key (Adicionar chave SSH).
+Se solicitado, confirme sua senha do GitHub.
+
+Autorizando sua chave do git
+Digite no terminal
+
+ssh -T [git@github.com](<mailto:git@github.com>)
+
+Aguarde a mensagem e digite: yes
+
+Depois digite uma senha para sua chave e pronto.
+
+
+Mostrar novamente sua chave ssh
+cat /home/<nome do usuario>/.ssh/id_rsa.pub
+
+Altere o nome do usuário para o nome que você utiliza como usuário.
+
+
+
+Referências:
+
+https://pt.wikipedia.org/wiki/Secure_Shell
+
+https://docs.github.com/pt/authentication/connecting-to-github-with-ssh
+
+
+
+Espero ter ajudado.
+
+
+
+Contato:
+
+https://github.com/arnaldofilh0
+
+https://www.linkedin.com/in/arnaldofilh0/
